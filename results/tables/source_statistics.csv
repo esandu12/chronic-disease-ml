@@ -1,0 +1,6 @@
+,age,age,age,age,age,bmi,bmi,bmi,bmi,bmi,glucose,glucose,glucose,glucose,glucose,HbA1c_level,HbA1c_level,HbA1c_level,HbA1c_level,HbA1c_level,cholesterol,cholesterol,cholesterol,cholesterol,cholesterol,systolic_bp,systolic_bp,systolic_bp,systolic_bp,systolic_bp,diastolic_bp,diastolic_bp,diastolic_bp,diastolic_bp,diastolic_bp
+,mean,median,std,min,max,mean,median,std,min,max,mean,median,std,min,max,mean,median,std,min,max,mean,median,std,min,max,mean,median,std,min,max,mean,median,std,min,max
+source_dataset,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+diabetes,42.73,44.0,21.89,2,80,27.32,27.32,6.77,10.01,95.69,138.22,140.0,40.91,80.0,300.0,5.53,5.8,1.07,3.5,9.0,223.0,225.07,8.37,191.67,299.0,134.22,134.17,0.99,132.24,137.14,89.53,89.5,0.71,87.84,92.16
+heart,49.31,49.0,18.19,18,80,29.07,29.07,6.3,18.0,40.0,120.1,120.0,23.57,80.0,160.0,6.17,5.71,0.8,5.13,9.0,225.45,226.0,43.53,150.0,300.0,134.44,134.35,0.89,132.24,137.14,89.42,89.41,0.45,87.88,92.16
+hypertension,53.49,54.0,20.79,18,89,27.49,27.5,7.21,15.0,40.0,134.49,134.0,37.53,70.0,199.0,6.16,5.7,0.81,5.13,9.0,224.54,225.0,43.36,150.0,299.0,134.51,135.0,26.02,90.0,179.0,89.45,89.0,17.31,60.0,119.0

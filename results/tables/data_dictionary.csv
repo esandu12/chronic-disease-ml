@@ -1,0 +1,40 @@
+﻿Column,Data_Type,Description,Units,Role,Unique_Values,Missing_Count,Example_Values,Verification_Status
+composite_key,str,Composite category key; not a unique patient ID,Not yet verified,Potential leakage / source proxy,192,0,Young_Female_Normal_Never_No | Young_Female_Obese_Never_No | Middle_Female_Overweight_Never_No,Needs publisher documentation review
+age_level,str,Age group category,Not yet verified,Candidate predictor,4,0,Young | Middle | Mature,Needs publisher documentation review
+gender,str,Gender category,Not yet verified,Candidate predictor,2,0,Female | Male,Needs publisher documentation review
+bmi_level,str,BMI category,Not yet verified,Candidate predictor,4,0,Normal | Obese | Overweight,Needs publisher documentation review
+smoking,str,Smoking status,Not yet verified,Candidate predictor,3,0,Never | Current | Former,Needs publisher documentation review
+diabetes,str,Diabetes status indicator,Not yet verified,Potential leakage / source proxy,2,0,No | Yes,Needs publisher documentation review
+age,int64,Age value,Not yet verified,Candidate predictor,88,0,9 | 3 | 4,Needs publisher documentation review
+age_normalized,float64,Normalized age representation,Not yet verified,Candidate predictor,151,0,0.0804597701149425 | 0.0114942528735632 | 0.0229885057471264,Needs publisher documentation review
+bmi,float64,Body mass index,Not yet verified,Candidate predictor,14122,0,19.2 | 22.55 | 22.89,Needs publisher documentation review
+hypertension,float64,Hypertension-related numerical field,Not yet verified,Potential leakage / source proxy,137,0,0.0 | 1.0 | 0.08300395256917,Needs publisher documentation review
+heart_disease,float64,Heart-disease-related numerical field,Not yet verified,Potential leakage / source proxy,125,0,0.0 | 1.0 | 0.0553359683794466,Needs publisher documentation review
+HbA1c_level,float64,HbA1c measurement,Not yet verified,Candidate predictor,192,0,5.8 | 6.6 | 4.0,Needs publisher documentation review
+glucose,float64,Blood glucose measurement,Not yet verified,Candidate predictor,154,0,158.0 | 159.0 | 126.0,Needs publisher documentation review
+cholesterol,float64,Cholesterol measurement,Not yet verified,Candidate predictor,323,0,214.703703703704 | 229.145454545455 | 229.631578947368,Needs publisher documentation review
+sleep_hours,float64,Sleep duration,Not yet verified,Candidate predictor,10092,0,6.86440252220183 | 7.03713165837442 | 7.04801484380137,Needs publisher documentation review
+triglycerides,float64,Triglyceride measurement,Not yet verified,Candidate predictor,525,0,246.703703703704 | 250.181818181818 | 243.640350877193,Needs publisher documentation review
+physical_activity,str,Physical activity category,Not yet verified,Candidate predictor,3,0,High | Moderate | Low,Needs publisher documentation review
+family_history,str,Family history indicator,Not yet verified,Candidate predictor,2,0,No | Yes,Needs publisher documentation review
+stress_level,str,Stress category,Not yet verified,Candidate predictor,3,0,High | Low | Medium,Needs publisher documentation review
+low_hdl_cholesterol,str,Low HDL cholesterol indicator,Not yet verified,Candidate predictor,2,0,Yes | No,Needs publisher documentation review
+high_ldl_cholesterol,str,High LDL cholesterol indicator,Not yet verified,Candidate predictor,2,0,Yes | No,Needs publisher documentation review
+blood_pressure,float64,Blood-pressure-related measurement,Not yet verified,Candidate predictor,197,0,152.481481481481 | 146.345454545455 | 149.587719298246,Needs publisher documentation review
+high_blood_pressure,str,High blood pressure indicator,Not yet verified,Candidate predictor,2,0,No | Yes,Needs publisher documentation review
+sugar_consumption,str,Sugar consumption category,Not yet verified,Candidate predictor,3,0,Low | High | Medium,Needs publisher documentation review
+crp_level,float64,C-reactive protein-related measurement,Not yet verified,Candidate predictor,9992,0,8.21909829445936 | 6.77050491849571 | 7.46285940368505,Needs publisher documentation review
+homocysteine_level,float64,Homocysteine measurement,Not yet verified,Candidate predictor,9996,0,11.1680955581556 | 13.6124952357724 | 13.0876199246661,Needs publisher documentation review
+systolic_bp,float64,Systolic blood pressure,Not yet verified,Candidate predictor,275,0,135.380191693291 | 133.749490835031 | 133.176,Needs publisher documentation review
+diastolic_bp,float64,Diastolic blood pressure,Not yet verified,Candidate predictor,245,0,89.5399361022364 | 89.20366598778 | 89.7931428571429,Needs publisher documentation review
+alcohol_intake,float64,Alcohol intake measurement or score,Not yet verified,Candidate predictor,486,0,14.7776357827476 | 14.6576374745418 | 15.0275428571429,Needs publisher documentation review
+salt_intake,float64,Salt intake measurement or score,Not yet verified,Candidate predictor,316,0,8.685303514377 | 8.3816700610998 | 8.4776,Needs publisher documentation review
+heart_rate,float64,Heart rate,Not yet verified,Candidate predictor,235,0,74.3290734824281 | 73.3462321792261 | 74.0228571428571,Needs publisher documentation review
+hdl,float64,HDL cholesterol measurement,Not yet verified,Candidate predictor,254,0,65.6517571884984 | 62.0570264765784 | 64.8891428571429,Needs publisher documentation review
+ldl,float64,LDL cholesterol measurement,Not yet verified,Candidate predictor,304,0,129.220447284345 | 126.729124236253 | 130.259428571429,Needs publisher documentation review
+education_level,str,Education category,Not yet verified,Candidate predictor,3,0,Primary | Tertiary | Secondary,Needs publisher documentation review
+employment_status,str,Employment category,Not yet verified,Candidate predictor,3,0,Retired | Employed | Unemployed,Needs publisher documentation review
+source_dataset,str,Original dataset source,Not yet verified,Potential leakage / source proxy,3,0,diabetes | heart | hypertension,Needs publisher documentation review
+disease_flags,str,Combined disease status indicators,Not yet verified,Potential leakage / source proxy,8,0,"0,0,0 | 1,0,0 | 0,0,1",Needs publisher documentation review
+sublabel,str,Eight-class disease-combination target,Not yet verified,Target,8,0,N | DI | HY,Needs publisher documentation review
+label,str,Binary Normal/Abnormal label,Not yet verified,Potential leakage / source proxy,2,0,Normal | Abnormal,Needs publisher documentation review
