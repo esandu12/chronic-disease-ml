@@ -1,0 +1,16 @@
+{
+  "random_state": 42,
+  "split": "70/15/15 grouped (src.three_way_split)",
+  "k_features": 20,
+  "svm_train_limit": 10000,
+  "rfe_sample": 20000,
+  "evaluation": "fit on training data, evaluate on validation; test set unused",
+  "decision_tree": "DecisionTreeClassifier(class_weight='balanced', max_depth=12,\n                       min_samples_leaf=20, random_state=42)",
+  "svm": "SVC(class_weight='balanced', random_state=42)",
+  "versions": {
+    "python": "3.13.18",
+    "sklearn": "1.9.1",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3"
+  }
+}
