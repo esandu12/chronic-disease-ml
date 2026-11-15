@@ -1,0 +1,5 @@
+Feature,Input_Columns,Formula,Rationale,Interpretation,Limitations
+cholesterol_hdl_ratio,"cholesterol, hdl",cholesterol / hdl,Represent the relative relationship between total cholesterol and HDL.,Higher values indicate more total cholesterol relative to HDL.,Requires compatible cholesterol and HDL units; not clinically validated in this dataset.
+triglycerides_hdl_ratio,"triglycerides, hdl",triglycerides / hdl,Represent the relationship between triglycerides and HDL.,Higher values indicate more triglycerides relative to HDL.,Requires verified units; clinical meaning depends on measurement context.
+non_hdl_cholesterol,"cholesterol, hdl",cholesterol - hdl,Represent cholesterol excluding the HDL component.,Difference between total cholesterol and HDL.,Requires consistent units and verified measurement definitions.
+age_bmi_interaction,"age, bmi",age * bmi,Capture a possible interaction between age and BMI.,Larger values reflect higher combined age and BMI.,Experimental interaction; not an established clinical risk score.
