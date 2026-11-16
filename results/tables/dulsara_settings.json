@@ -1,0 +1,71 @@
+{
+  "random_state": 42,
+  "split": "70/15/15 grouped (src.three_way_split)",
+  "use_engineering": true,
+  "cv_folds": 3,
+  "svm_train_limit": 10000,
+  "decision_tree": {
+    "grid": {
+      "classifier__max_depth": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "classifier__min_samples_leaf": [
+        1,
+        20,
+        50
+      ]
+    },
+    "best": {
+      "max_depth": 16,
+      "min_samples_leaf": 1
+    },
+    "cv_macro_f1": 0.37549537684693096,
+    "tuning_seconds": 43.1
+  },
+  "svm_rbf": {
+    "grid": {
+      "classifier__C": [
+        0.3,
+        1,
+        3,
+        10
+      ],
+      "classifier__gamma": [
+        "scale",
+        0.01,
+        0.1
+      ]
+    },
+    "best": {
+      "C": 3,
+      "gamma": "scale"
+    },
+    "cv_macro_f1": 0.35099526717554647,
+    "tuning_seconds": 47.3
+  },
+  "best_validation": [
+    {
+      "Model": "Decision Tree",
+      "Strategy": "smote",
+      "Macro_F1": 0.37678080169243144,
+      "Balanced_Accuracy": 0.49611959700501507
+    },
+    {
+      "Model": "SVM (RBF)",
+      "Strategy": "smote",
+      "Macro_F1": 0.36857782363908154,
+      "Balanced_Accuracy": 0.4398283225520514
+    }
+  ],
+  "test_set_used": false,
+  "versions": {
+    "python": "3.13.18",
+    "sklearn": "1.9.1",
+    "imblearn": "0.14.2",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3"
+  }
+}
