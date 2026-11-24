@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+from functools import partial
+
 import numpy as np
 import pandas as pd
 
@@ -125,7 +127,7 @@ def mutual_information_scores(
     ).reset_index(drop=True)
 
 
-def _mutual_information_score(X, y):
+def _mutual_information_score(X, y, random_state=42):
     """Scoring function used by SelectKBest."""
 
     values = np.asarray(X)
@@ -145,7 +147,7 @@ def _mutual_information_score(X, y):
         values,
         y,
         discrete_features=discrete_features,
-        random_state=42,
+        random_state=random_state,
         n_neighbors=3
     )
 
@@ -185,8 +187,13 @@ class MutualInformationSelector(
             values.shape[1]
         )
 
+        score_function = partial(
+            _mutual_information_score,
+            random_state=self.random_state
+        )
+
         self.selector_ = SelectKBest(
-            score_func=_mutual_information_score,
+            score_func=score_function,
             k=selected_k
         )
 
