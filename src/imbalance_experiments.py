@@ -19,7 +19,7 @@ from sklearn.metrics import (
     f1_score,
     recall_score,
 )
-from sklearn.model_selection import GridSearchCV, StratifiedKFold
+from sklearn.model_selection import GridSearchCV, StratifiedGroupKFold
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 
@@ -69,10 +69,28 @@ def build_imbalance_pipeline(
     return ImbPipeline(steps)
 
 
-def tune_with_cv(pipeline, param_grid, X, y, n_splits=3, random_state=42, n_jobs=-1):
+def tune_with_cv(
+    pipeline,
+    param_grid,
+    X,
+    y,
+    groups,
+    n_splits=3,
+    random_state=42,
+    n_jobs=-1,
+):
     """Bounded grid search on training data only, scored by macro F1."""
 
-    cv = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=random_state)
+    row_count = len(X)
+    if len(y) != row_count or len(groups) != row_count:
+        raise ValueError(
+            "X, y, and groups must contain the same number of rows "
+            f"(got {row_count}, {len(y)}, and {len(groups)})."
+        )
+
+    cv = StratifiedGroupKFold(
+        n_splits=n_splits, shuffle=True, random_state=random_state
+    )
     search = GridSearchCV(
         pipeline,
         param_grid=param_grid,
@@ -87,7 +105,7 @@ def tune_with_cv(pipeline, param_grid, X, y, n_splits=3, random_state=42, n_jobs
         return_train_score=False,
     )
     start = time.perf_counter()
-    search.fit(X, y)
+    search.fit(X, y, groups=groups)
     runtime = time.perf_counter() - start
 
     results = pd.DataFrame(search.cv_results_)
