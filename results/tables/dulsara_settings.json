@@ -44,7 +44,34 @@
       "gamma": "scale"
     },
     "cv_macro_f1": 0.3582078050713731,
-    "tuning_seconds": 12.6
+    "tuning_seconds": 12.1
+  },
+  "random_forest": {
+    "grid": {
+      "classifier__n_estimators": [
+        100,
+        200
+      ],
+      "classifier__max_depth": [
+        12,
+        20
+      ],
+      "classifier__min_samples_leaf": [
+        5,
+        20
+      ],
+      "classifier__max_features": [
+        "sqrt"
+      ]
+    },
+    "best": {
+      "max_depth": 20,
+      "max_features": "sqrt",
+      "min_samples_leaf": 5,
+      "n_estimators": 100
+    },
+    "cv_macro_f1": 0.38507427923013826,
+    "tuning_seconds": 352.7
   },
   "best_validation": [
     {
@@ -52,6 +79,12 @@
       "Strategy": "smote",
       "Macro_F1": 0.38023077689689855,
       "Balanced_Accuracy": 0.4504452255700703
+    },
+    {
+      "Model": "Random Forest",
+      "Strategy": "random_oversample",
+      "Macro_F1": 0.394203253726063,
+      "Balanced_Accuracy": 0.519227616522901
     },
     {
       "Model": "SVM (RBF)",
