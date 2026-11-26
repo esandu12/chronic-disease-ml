@@ -19,11 +19,11 @@
       ]
     },
     "best": {
-      "max_depth": 16,
+      "max_depth": 20,
       "min_samples_leaf": 1
     },
-    "cv_macro_f1": 0.37549537684693096,
-    "tuning_seconds": 43.1
+    "cv_macro_f1": 0.37579084981900673,
+    "tuning_seconds": 73.1
   },
   "svm_rbf": {
     "grid": {
@@ -40,32 +40,32 @@
       ]
     },
     "best": {
-      "C": 3,
+      "C": 10,
       "gamma": "scale"
     },
-    "cv_macro_f1": 0.35099526717554647,
-    "tuning_seconds": 47.3
+    "cv_macro_f1": 0.3582078050713731,
+    "tuning_seconds": 12.6
   },
   "best_validation": [
     {
       "Model": "Decision Tree",
       "Strategy": "smote",
-      "Macro_F1": 0.37678080169243144,
-      "Balanced_Accuracy": 0.49611959700501507
+      "Macro_F1": 0.38023077689689855,
+      "Balanced_Accuracy": 0.4504452255700703
     },
     {
       "Model": "SVM (RBF)",
-      "Strategy": "smote",
-      "Macro_F1": 0.36857782363908154,
-      "Balanced_Accuracy": 0.4398283225520514
+      "Strategy": "class_weight",
+      "Macro_F1": 0.35909132067721505,
+      "Balanced_Accuracy": 0.40587066123167925
     }
   ],
   "test_set_used": false,
   "versions": {
-    "python": "3.13.18",
+    "python": "3.14.9",
     "sklearn": "1.9.1",
     "imblearn": "0.14.2",
-    "pandas": "3.0.5",
-    "numpy": "2.5.3"
+    "pandas": "3.1.1",
+    "numpy": "2.5.5"
   }
 }
