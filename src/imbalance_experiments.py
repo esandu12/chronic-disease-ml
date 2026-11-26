@@ -20,6 +20,7 @@ from sklearn.metrics import (
     recall_score,
 )
 from sklearn.model_selection import GridSearchCV, StratifiedGroupKFold
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 
@@ -37,6 +38,8 @@ def _classifier(model, class_weight, params):
         )
     if model == "svm":
         return SVC(kernel="rbf", class_weight=class_weight, random_state=42, **params)
+    if model == "random_forest":
+        return RandomForestClassifier(class_weight=class_weight, random_state=42,  n_jobs=1, **params)
     raise ValueError(f"Unknown model: {model}")
 
 
